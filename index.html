@@ -2,221 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Trade With Munaaf</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pushkar Raj Thakur Official - Learning Community</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 
 <style>
+  :root {
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  * { box-sizing: border-box; }
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+  body {
+    margin: 0;
+    padding: 24px 12px;
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at 50% 0%, #1a1305 0%, #0a0703 55%, #000 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+  }
+  html { height: 100%; }
+  body { height: 100%; }
 
-body{
-background:#0f172a;
-display:flex;
-justify-content:center;
-align-items:center;
-min-height:100vh;
-color:#fff;
-}
+  .card {
+    width: 100%;
+    max-width: 340px;
+    background: linear-gradient(180deg, #12100a 0%, #0b0906 100%);
+    border: 1.5px solid #d4af37;
+    border-radius: 28px;
+    padding: 28px 20px 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.18), inset 0 0 40px rgba(212, 175, 55, 0.03);
+  }
 
-/* CARD */
+  .avatar {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    font-weight: 700;
+    color: #0b0906;
+    background: linear-gradient(135deg, #f6e27a 0%, #d4af37 50%, #a9781f 100%);
+    border: 3px solid #d4af37;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.5);
+    overflow: hidden;
+  }
 
-.container{
-width:95%;
-max-width:420px;
-padding:30px 25px;
-border-radius:18px;
+  h1 {
+    font-family: 'Playfair Display', serif;
+    color: #f3e5b3;
+    font-size: 21px;
+    margin: 16px 0 4px;
+    letter-spacing: 0.5px;
+  }
 
-background:rgba(255,255,255,0.05);
-backdrop-filter:blur(12px);
+  .subtitle {
+    color: #d4af37;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
 
-border:1px solid rgba(255,255,255,0.08);
+  .features {
+    text-align: left;
+    margin: 0 auto;
+    width: 100%;
+  }
 
-box-shadow:0 20px 60px rgba(0,0,0,0.6);
-text-align:center;
-}
+  .feature-item {
+    color: #d9d2bd;
+    font-size: 13px;
+    padding: 11px 4px;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.15);
+    display: flex;
+    align-items: center;
+  }
 
-/* LOGO */
+  .feature-item:last-child { border-bottom: none; }
 
-.logo{
-width:80px;
-height:80px;
-border-radius:50%;
-border:2px solid #FFD700;
-margin-bottom:12px;
-}
+  .icon {
+    margin-right: 12px;
+    font-size: 15px;
+    color: #d4af37;
+  }
 
-/* TEXT */
+  .join-text {
+    color: #cfc7ab;
+    font-size: 12px;
+    margin: 22px 0 12px;
+    font-weight: 300;
+  }
 
-h1{
-font-size:22px;
-color:#FFD700;
-margin-bottom:6px;
-}
+  .telegram-btn {
+    display: block;
+    background: linear-gradient(90deg, #d4af37 0%, #f6e27a 50%, #d4af37 100%);
+    color: #0b0906;
+    text-decoration: none;
+    padding: 14px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-bottom: 16px;
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
+  }
 
-h2{
-font-size:15px;
-opacity:0.9;
-margin-bottom:10px;
-}
+  .hindi-quote {
+    color: #b9ae87;
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-style: italic;
+  }
 
-.sub{
-font-size:13px;
-opacity:0.7;
-margin-bottom:18px;
-}
+  .footer-box {
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 12px;
+    padding: 8px;
+    font-size: 11px;
+    color: #8a836c;
+  }
 
-/* BUTTON */
+  .footer-box a {
+    color: #d4af37;
+    font-weight: bold;
+    text-decoration: none;
+  }
 
-.btn{
-display:block;
-text-decoration:none;
-background:#22c55e;
-color:#000;
-font-weight:700;
-padding:16px;
-border-radius:10px;
-margin:12px 0;
-transition:0.3s;
-}
-
-.btn:hover{
-background:#16a34a;
-transform:scale(1.03);
-}
-
-/* TRUST BOX */
-
-.trust{
-background:rgba(0,255,150,0.08);
-padding:10px;
-border-radius:10px;
-font-size:13px;
-margin-bottom:15px;
-border:1px solid rgba(0,255,150,0.2);
-}
-
-/* LIST */
-
-.points{
-list-style:none;
-font-size:14px;
-text-align:left;
-margin:15px 0;
-}
-
-.points li{
-margin:8px 0;
-}
-
-/* URGENCY */
-
-.timer{
-margin-top:10px;
-font-size:13px;
-color:#facc15;
-}
-
-/* SOCIAL PROOF */
-
-.proof{
-margin-top:12px;
-font-size:12px;
-opacity:0.7;
-}
-
-/* FOOTER BRAND */
-
-.footer{
-margin-top:20px;
-font-size:12px;
-opacity:0.6;
-}
-
-.footer a{
-color:#38bdf8;
-text-decoration:none;
-font-weight:600;
-}
-
-.footer a:hover{
-text-decoration:underline;
-}
-
-/* RISK */
-
-.risk{
-margin-top:10px;
-font-size:11px;
-opacity:0.5;
-}
-
+  .disclaimer {
+    font-size: 9px;
+    color: #4a4633;
+    margin-top: 12px;
+  }
 </style>
 </head>
-
 <body>
 
-<div class="container">
+<div class="card">
+  <div class="avatar">
+    <img src="https://i.ibb.co/35BKKbVq/b-V7-Blz66m-UBs-STfc-Gih-Vhpqq-S1-UANTo9-OShn-R1ppjz-O6q-GDnf-URYva-A8-Jynx-AGu-DPOWmvwp-I0-E-zj-QIGhp-LK.jpg" alt="Pushkar Raj Thakur Official" style="width:100%;height:100%;object-fit:cover;border-radius:50%;display:block;">
+  </div>
 
-<img src="https://i.ibb.co/HThtfpR7/Whats-App-Image-2026-01-30-at-8-54-08-PM.jpg" class="logo">
+  <h1>HAJI SALMAN</h1>
+  <div class="subtitle">Learn. Understand. Grow.</div>
 
-<h1>TRADE WITH MUNAAF</h1>
-<h2>NIFTY • BANKNIFTY • OPTIONS</h2>
+  <div class="features">
+    <div class="feature-item"><span class="icon">🌐</span> Live Learning &amp; Knowledge Sessions</div>
+    <div class="feature-item"><span class="icon">📊</span> Understanding Market Basics</div>
+    <div class="feature-item"><span class="icon">💎</span> Simplified Chart Reading Concepts</div>
+    <div class="feature-item"><span class="icon">💻</span> Real Case Studies &amp; Discussions</div>
+  </div>
 
-<p class="sub">
-Daily Intraday Trading Signals & Analysis
-</p>
+  <p class="join-text">Be part of a community that learns and grows together</p>
 
-<!-- TOP BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
+  <a href="https://t.me/+CW50-In6NRQ1ODk1" class="telegram-btn">JOIN NOW</a>
 
-<div class="trust">
-✔ Trusted by 5,000+ Traders <br>
-✔ Daily Consistent Setups
+  <p class="hindi-quote">नियत अच्छी और मेहनत सच्ची हो, तो कामयाबी जरूर मिलती है।</p>
+
+  <div class="footer-box">
+    Promoted By <a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">AD BUILD AGENCY</a>
+  </div>
+
+  <div class="disclaimer">
+    Terms | Privacy | Disclaimer <br>
+    This site is not part of Facebook™ or endorsed by Facebook™.
+  </div>
 </div>
-
-<ul class="points">
-<li>✔ 5–7 High Probability Trades</li>
-<li>✔ Exact Entry, SL & Target</li>
-<li>✔ Beginner Friendly Guidance</li>
-<li>✔ Live Market Updates</li>
-</ul>
-
-<!-- BOTTOM BUTTON -->
-<a href="https://t.me/+2PsKWi3L1Uk3NjZl" class="btn">
-🚀 Join Free Telegram Channel
-</a>
-
-<div class="timer">
-⏳ Free Access Closing Soon
-</div>
-
-<div class="proof">
-📈 Limited Seats • Active Community
-</div>
-
-<p class="risk">
-⚠ Market investments are subject to risk
-</p>
-
-<!-- CLEAN FOOTER -->
-<div class="footer">
-Powered by 
-<a href="https://t.me/+3XoqJNLxYHswNTc1" target="_blank">
-AdsBuild Agency
-</a>
-</div>
-
-</div>
-
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '28699762319655067');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=28699762319655067&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
 </body>
 </html>
